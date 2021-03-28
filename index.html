@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html lang="en" >
+<head>	
+<meta charset="UTF-8">
+<meta name="container" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<title>随机密码生成器</title>
+
+<!--图标库-->
+<link rel='stylesheet' href='css/fontawesome.css'>
+
+<!--字体库-->
+<!--<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap'>-->
+
+<!--主要样式-->
+<link rel="stylesheet" href="css/style.css">
+	
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	
+</head>
+<body>
+
+<div class="container">
+	<h2 class="title">随机密码生成器</h2>
+	<div class="result">
+		<div class="result__title field-title">生成的密码</div>
+		<div class="result__info right">点击复制</div>
+		<div class="result__info left">复制</div>
+		<div class="result__viewbox" id="result">点击生成</div>
+		<button id="copy-btn" style="--x: 0; --y: 0"> <div class=""></button>
+	</div>
+	<div class="length range__slider" data-min="6" data-max="32">
+		<div class="length__title field-title" data-length='0'>长度：</div>
+		<input id="slider" type="range" min="6" max="32" value="16" />
+	</div>
+
+	<div class="settings">
+		<span class="settings__title field-title">settings</span>
+		<div class="setting">
+			<input type="checkbox" id="uppercase" checked />
+			<label for="uppercase">包含大写</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="lowercase" checked />
+			<label for="lowercase">包含小写</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="number" checked />
+			<label for="number">包括数字</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="symbol" checked />
+			<label for="symbol">包括符号</label>
+		</div>
+	</div>
+
+	<button class="btn generate" id="generate">生成密码</button>
+</div>
+
+<script  src="js/script.js"></script>
+</body>
+</html>
